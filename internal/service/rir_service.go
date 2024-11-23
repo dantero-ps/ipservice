@@ -24,7 +24,7 @@ func NewRIRService(logger *zap.Logger) *RIRService {
 	return &RIRService{
 		logger: logger,
 		client: &http.Client{
-			Timeout: 60 * time.Second,
+			Timeout: 180 * time.Second,
 			Transport: &http.Transport{
 				MaxIdleConns:       100,
 				IdleConnTimeout:    90 * time.Second,
