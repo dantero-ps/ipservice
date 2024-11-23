@@ -15,7 +15,7 @@ A high-performance service that provides IP to country mapping using data from R
 
 ## Prerequisites
 
-- Go 1.21 or higher
+- Go 1.22 or higher
 - PostgreSQL 15 or higher
 - Redis 7 or higher
 - Docker and Docker Compose (optional)
