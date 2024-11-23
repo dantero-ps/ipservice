@@ -67,8 +67,21 @@ Response:
 ## Configuration
 
 Environment variables:
-- `POSTGRES_URL`: PostgreSQL connection string (default: "postgres://postgres:postgres@localhost:5432/ipservice?sslmode=disable")
-- `REDIS_URL`: Redis connection string (default: "redis://localhost:6379/0")
+
+PostgreSQL Configuration:
+- `DB_USER`: Database user (default: "postgres")
+- `DB_PASSWORD`: Database password (default: "postgres")
+- `DB_HOST`: Database host (default: "localhost")
+- `DB_PORT`: Database port (default: "5432")
+- `DB_NAME`: Database name (default: "ipservice")
+- `DB_SSLMODE`: SSL mode (default: "disable")
+
+Redis Configuration:
+- `REDIS_HOST`: Redis host (default: "localhost")
+- `REDIS_PORT`: Redis port (default: "6379")
+- `REDIS_DB`: Redis database number (default: "0")
+
+Server Configuration:
 - `SERVER_PORT`: HTTP server port (default: ":8080")
 
 ## Development
