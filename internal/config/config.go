@@ -3,6 +3,7 @@ package config
 import (
 	"fmt"
 	"github.com/spf13/viper"
+	"net/url"
 )
 
 type Config struct {
@@ -33,9 +34,10 @@ type RIR struct {
 }
 
 func buildPostgresURL(cfg PostgresConfig) string {
+	escapedPassword := url.QueryEscape(cfg.Password)
 	return fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=%s",
 		cfg.User,
-		cfg.Password,
+		escapedPassword,
 		cfg.Host,
 		cfg.Port,
 		cfg.Database,
