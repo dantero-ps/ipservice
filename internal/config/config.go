@@ -72,12 +72,12 @@ func Load() (*Config, error) {
 
 	// Build PostgreSQL URL
 	postgresConfig := PostgresConfig{
-		User:     viper.GetString("POSTGRES_USER"),
-		Password: viper.GetString("POSTGRES_PASSWORD"),
-		Host:     viper.GetString("POSTGRES_HOST"),
-		Port:     viper.GetString("POSTGRES_PORT"),
-		Database: viper.GetString("POSTGRES_DB"),
-		SSLMode:  viper.GetString("POSTGRES_SSLMODE"),
+		User:     viper.GetString("DB_USER"),
+		Password: viper.GetString("DB_PASSWORD"),
+		Host:     viper.GetString("DB_HOST"),
+		Port:     viper.GetString("DB_PORT"),
+		Database: viper.GetString("DB_NAME"),
+		SSLMode:  viper.GetString("DB_SSLMODE"),
 	}
 
 	// Build Redis URL
