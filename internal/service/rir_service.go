@@ -99,7 +99,7 @@ func (s *RIRService) fetchWithTimeout(ctx context.Context, url string) ([]model.
 
 	var ranges []model.IPRange
 	scanner := bufio.NewScanner(resp.Body)
-	const maxCapacity = 1024 * 1024
+	const maxCapacity = 1024 * 1024 * 20
 	buf := make([]byte, maxCapacity)
 	scanner.Buffer(buf, maxCapacity)
 
