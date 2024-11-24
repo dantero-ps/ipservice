@@ -8,8 +8,8 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - POSTGRES_URL=postgres://postgres:postgres@postgres:5432/ipservice?sslmode=disable
-      - REDIS_URL=redis://redis:6379/0
+      - DB_HOST=postgres
+      - REDIS_HOST=redis
     depends_on:
       postgres:
         condition: service_healthy
